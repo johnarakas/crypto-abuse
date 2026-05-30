@@ -3402,7 +3402,7 @@ class Bar extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
         variant: "dark",
         children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"], {
           children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"].Brand, {
-            href: "/",
+            href: "/crypto-abuse",
             children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__["default"], {
               style: {},
               children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["default"], {
@@ -3440,7 +3440,7 @@ class Bar extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
           }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["default"], {
             className: "me-auto",
             children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["default"].Link, {
-              href: "/sources",
+              href: "/crypto-abuse/sources",
               children: "Sources"
             }, void 0, false, {
               fileName: _jsxFileName,
