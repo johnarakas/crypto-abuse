@@ -109,6 +109,7 @@ function App() {
         lineNumber: 26,
         columnNumber: 9
       }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxDEV)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.BrowserRouter, {
+        basename: "/crypto-abuse",
         children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxDEV)(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Routes, {
           children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxDEV)(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Route, {
             exact: true,
