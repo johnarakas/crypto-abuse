@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+/* ══════════════════════════════════════════════════════════
+   CRYPTO ABUSES  —  HACK THE BOX DARK THEME
+   ══════════════════════════════════════════════════════════ */
+:root {
+  --bg:          #141d2b;
+  --bg2:         #111927;
+  --card:        #1e2d40;
+  --card2:       #243447;
+  --border:      #2a3f55;
+  --border2:     #1e3048;
+  --green:       #9FEF00;
+  --green-dim:   rgba(159,239,0,.55);
+  --green-glow:  rgba(159,239,0,.15);
+  --green-faint: rgba(159,239,0,.06);
+  --cyan:        #00e5ff;
+  --text:        #a4b1cd;
+  --text-bright: #cdd9e5;
+  --heading:     #ffffff;
+  --muted:       #4a6278;
+  --red:         #ff6b6b;
+  --orange:      #ffb86c;
+  --mono:        'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  --sans:        'Inter', system-ui, sans-serif;
+  --r:           12px;
+  --r-sm:        8px;
+  --shadow:      0 4px 24px rgba(0,0,0,.55);
+  --shadow-lg:   0 12px 48px rgba(0,0,0,.70);
+  --glow-green:  0 0 20px rgba(159,239,0,.25), 0 0 40px rgba(159,239,0,.10);
+}
+
+/* ── BASE ──────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; transition: color .15s, background-color .15s, border-color .15s, box-shadow .2s; }
+html { scroll-behavior: smooth; font-size: 14.5px; }
+body {
+  font-family: var(--sans) !important;
+  background: var(--bg) !important;
+  color: var(--text) !important;
+  margin: 0 !important;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(159,239,0,.05) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+  z-index: 0;
+}
+::selection { background: rgba(159,239,0,.25); color: #fff; }
+
+/* ── TYPOGRAPHY ────────────────────────────────────────────────── */
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
+  font-family: var(--sans) !important;
+  font-weight: 700 !important;
+  color: var(--heading) !important;
+  letter-spacing: -.02em !important;
+  line-height: 1.25 !important;
+}
+h1{font-size:2rem!important} h2{font-size:1.6rem!important}
+h3{font-size:1.25rem!important} h4{font-size:1.05rem!important}
+p { color: var(--text); line-height: 1.75; }
+a { color: var(--green) !important; text-decoration: none !important; font-weight: 500; }
+a:hover { color: #fff !important; text-shadow: var(--glow-green); text-decoration: none !important; }
+
+/* ── SCROLLBAR ──────────────────────────────────────────────────── */
+::-webkit-scrollbar { width:6px; height:6px; }
+::-webkit-scrollbar-track { background: var(--bg2); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius:3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--green); }
+
+/* ── NAVBAR ─────────────────────────────────────────────────────── */
+nav.navbar, .navbar, nav[class*="navbar"], div[class*="navbar"] {
+  background: var(--bg2) !important;
+  border-bottom: 1px solid var(--border) !important;
+  box-shadow: 0 1px 0 rgba(159,239,0,.08), 0 4px 20px rgba(0,0,0,.4) !important;
+  padding: 10px 32px !important;
+  position: sticky !important;
+  top: 0;
+  z-index: 1000;
+}
+nav.navbar::before, .navbar::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--green), var(--cyan), var(--green), transparent);
+}
+/* Bigger logo */
+.navbar img, nav.navbar img, nav img {
+  height: 58px !important;
+  width: auto !important;
+  filter: brightness(1.1);
+}
+.navbar-brand, .navbar-brand *, nav .brand {
+  color: var(--heading) !important;
+  font-weight: 800 !important;
+  font-family: var(--mono) !important;
+  font-size: 1.05rem !important;
+}
+.navbar a, .nav-link {
+  color: var(--text) !important;
+  font-weight: 500 !important;
+  font-size: .85rem !important;
+  padding: 6px 14px !important;
+  border-radius: var(--r-sm) !important;
+  border: 1px solid transparent !important;
+}
+.navbar a:hover, .nav-link:hover {
+  color: var(--green) !important;
+  background: var(--green-faint) !important;
+  border-color: rgba(159,239,0,.18) !important;
+  text-shadow: none !important;
+}
+.navbar a.active, .nav-link.active {
+  color: var(--green) !important;
+  background: var(--green-faint) !important;
+  border-color: rgba(159,239,0,.25) !important;
+}
+
+/* ── SECOND NAV / TABS ──────────────────────────────────────────── */
+.nav-tabs {
+  border-bottom: 1px solid var(--border) !important;
+  background: var(--card) !important;
+  padding: 0 12px; gap: 2px;
+}
+.nav-tabs .nav-link {
+  color: var(--muted) !important;
+  font-size: .82rem !important;
+  font-weight: 500 !important;
+  padding: 10px 16px !important;
+  border: none !important;
+  border-bottom: 2px solid transparent !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+.nav-tabs .nav-link:hover { color: var(--text-bright) !important; border-bottom-color: var(--border) !important; }
+.nav-tabs .nav-link.active { color: var(--green) !important; border-bottom-color: var(--green) !important; font-weight: 700 !important; }
+
+/* ── PAGE BACKGROUND ────────────────────────────────────────────── */
+div[style*="paddingBottom"], div[style*="padding-bottom"] {
+  background: var(--bg) !important;
+  padding-top: 24px !important;
+}
+
+/* ── CARDS — Level 1 (outermost white div) ──────────────────────── */
+div[style*="background-color: white"],
+div[style*="background-color:white"],
+div[style*="backgroundColor: white"],
+div[style*='background-color: "white"'] {
+  background: var(--card) !important;
+  border-radius: var(--r) !important;
+  box-shadow: var(--shadow) !important;
+  border: 1px solid var(--border2) !important;
+  border-top: 1px solid rgba(159,239,0,.12) !important;
+  padding: 28px !important;
+  margin-bottom: 20px !important;
+}
+div[style*="background-color: white"]:hover,
+div[style*="background-color:white"]:hover {
+  border-color: rgba(159,239,0,.25) !important;
+  box-shadow: var(--shadow-lg), 0 0 0 1px rgba(159,239,0,.10) !important;
+}
+/* Level 2 — nested: no extra border accent, just slightly lighter shade */
+div[style*="background-color: white"] div[style*="background-color: white"],
+div[style*="background-color: white"] div[style*="background-color:white"],
+div[style*="background-color:white"]  div[style*="background-color: white"],
+div[style*="background-color:white"]  div[style*="background-color:white"] {
+  background: var(--card2) !important;
+  border: 1px solid var(--border2) !important;
+  border-top: 1px solid var(--border2) !important;
+  box-shadow: none !important;
+  margin-bottom: 12px !important;
+}
+div[style*="background-color: white"] div[style*="background-color: white"]:hover,
+div[style*="background-color:white"]  div[style*="background-color: white"]:hover {
+  border-color: rgba(159,239,0,.15) !important;
+  box-shadow: none !important;
+}
+
+/* ════════════════════════════════════════════════════════════
+   TABLES — AGGRESSIVE OVERRIDE
+   Every cell forced dark via multiple selector strategies
+   ════════════════════════════════════════════════════════════ */
+
+/* 1. CSS custom property reset on the table element */
+.table {
+  --bs-table-color:          #a4b1cd;
+  --bs-table-bg:             #1e2d40;
+  --bs-table-border-color:   #253a52;
+  --bs-table-striped-color:  #a4b1cd;
+  --bs-table-striped-bg:     #243447;
+  --bs-table-active-color:   #cdd9e5;
+  --bs-table-active-bg:      rgba(159,239,0,.08);
+  --bs-table-hover-color:    #cdd9e5;
+  --bs-table-hover-bg:       rgba(159,239,0,.07);
+  --bs-table-accent-bg:      transparent;
+  border-collapse: collapse !important;
+  font-size: .84rem !important;
+  margin-bottom: 0 !important;
+  width: 100% !important;
+  color: #a4b1cd !important;
+  background-color: #1e2d40 !important;
+}
+
+/* 2. Every single cell — highest specificity */
+body .table > thead > tr > th,
+body .table > thead > tr > td,
+body .table > tbody > tr > th,
+body .table > tbody > tr > td,
+body .table > tfoot > tr > th,
+body .table > tfoot > tr > td {
+  background-color: #1e2d40 !important;
+  color: #a4b1cd !important;
+  border-color: #253a52 !important;
+}
+
+/* 3. Striped rows */
+body .table-striped > tbody > tr:nth-child(odd) > td,
+body .table-striped > tbody > tr:nth-child(odd) > th {
+  background-color: #243447 !important;
+  --bs-table-accent-bg: #243447 !important;
+}
+body .table-striped > tbody > tr:nth-child(even) > td,
+body .table-striped > tbody > tr:nth-child(even) > th {
+  background-color: #1e2d40 !important;
+}
+
+/* 4. Hover */
+body .table-hover > tbody > tr:hover > td,
+body .table-hover > tbody > tr:hover > th {
+  background-color: rgba(159,239,0,.07) !important;
+  color: #cdd9e5 !important;
+}
+body .table tbody tr:hover {
+  box-shadow: inset 3px 0 0 var(--green) !important;
+}
+
+/* 5. Table wrapper */
+.table-responsive {
+  border-radius: var(--r) !important;
+  overflow: hidden !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: var(--shadow) !important;
+  background: #1e2d40 !important;
+}
+
+/* THEAD — green monospace labels */
+body .table > thead > tr > th {
+  background-color: #111927 !important;
+  color: #9FEF00 !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-weight: 500 !important;
+  font-size: .68rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: .12em !important;
+  padding: 14px 18px !important;
+  border-bottom: 1px solid rgba(159,239,0,.4) !important;
+}
+
+/* Row index column */
+body .table > tbody > tr > td:first-child {
+  color: var(--muted) !important;
+  font-family: var(--mono) !important;
+  font-size: .75rem !important;
+}
+
+/* Source/name column */
+body .table > tbody > tr > td:nth-child(2) {
+  color: var(--text-bright) !important;
+  font-weight: 500 !important;
+}
+
+/* Explicitly marked money cells */
+td[id="value"] {
+  color: var(--green) !important;
+  font-family: var(--mono) !important;
+  font-weight: 600 !important;
+  font-size: .82rem !important;
+}
+
+/* Row border */
+body .table > tbody > tr {
+  border-bottom: 1px solid #253a52 !important;
+}
+
+/* Sort buttons inside thead */
+body .table > thead > tr > th .btn,
+body .table > thead > tr > th button {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: rgba(159,239,0,.5) !important;
+  padding: 0 4px !important;
+  font-size: .75rem !important;
+  transform: none !important;
+}
+body .table > thead > tr > th .btn:hover { color: var(--green) !important; }
+
+/* ── BUTTONS ────────────────────────────────────────────────────── */
+.btn {
+  border-radius: var(--r-sm) !important;
+  font-weight: 600 !important;
+  font-size: .83rem !important;
+  padding: 8px 20px !important;
+  transition: all .2s !important;
+}
+.btn-primary {
+  background: transparent !important;
+  border: 1.5px solid var(--green) !important;
+  color: var(--green) !important;
+  font-family: var(--mono) !important;
+  letter-spacing: .04em !important;
+  box-shadow: 0 0 12px rgba(159,239,0,.20) !important;
+}
+.btn-primary:hover {
+  background: var(--green) !important;
+  color: var(--bg) !important;
+  box-shadow: var(--glow-green) !important;
+  transform: translateY(-1px) !important;
+}
+.btn-secondary {
+  background: var(--card2) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--text) !important;
+}
+.btn-secondary:hover {
+  border-color: var(--green) !important;
+  color: var(--green) !important;
+  background: var(--green-faint) !important;
+}
+.btn-none, .btn[variant="none"] {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 4px 8px !important;
+  color: var(--muted) !important;
+  transform: none !important;
+}
+.btn-none:hover { color: var(--green) !important; background: var(--green-faint) !important; border-radius:6px!important; }
+
+/* ── CHARTS ──────────────────────────────────────────────────────── */
+/* Container — dark background so white-bg charts have a frame */
+.ca-chart-widget {
+  background: var(--card);
+  border: 1px solid var(--border2);
+  border-top: 2px solid var(--green);
+  border-radius: var(--r);
+  padding: 20px;
+  margin: 16px 0;
+  box-shadow: var(--shadow), inset 0 1px 0 rgba(159,239,0,.06);
+  transition: border-color .2s, box-shadow .2s;
+  position: relative;
+  overflow: hidden;
+}
+.ca-chart-widget::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: radial-gradient(ellipse at top left, rgba(159,239,0,.04), transparent 60%);
+  pointer-events: none;
+}
+.ca-chart-widget:hover {
+  border-color: rgba(159,239,0,.45);
+  box-shadow: var(--shadow-lg), var(--glow-green);
+}
+.ca-chart-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border2);
+}
+.ca-chart-header::before { content: '▶'; color: var(--green); font-size: .65rem; text-shadow: var(--glow-green); }
+.ca-chart-title {
+  font-family: var(--mono) !important;
+  font-size: .7rem !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--green);
+  text-shadow: 0 0 8px rgba(159,239,0,.4);
+}
+
+/* Chart images:
+   hue-rotate(-85deg) shifts teal/blue (~185°) → green (~100°)
+   For white-bg charts: white stays white but colors shift to green family
+   invert(0.08) subtly darkens pure whites without destroying chart readability */
+img[src^="data:image/png"].ca-real-chart {
+  border-radius: var(--r-sm) !important;
+  max-width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  /* Step 1 — brightness(4): amplifies dark teal fill to bright cyan/blue so hue-rotate
+               has enough signal to work with (dark colors barely shift when rotated).
+     Step 2 — hue-rotate(-115deg): rotates cyan (~190°) → 75°, landing on #9FEF00 green.
+     Step 3 — saturate(5): pushes the result to a vivid electric green.
+     White/transparent areas are unaffected: white stays white, transparent stays transparent. */
+  filter: brightness(4) hue-rotate(-115deg) saturate(5) !important;
+  outline: 1px solid rgba(159,239,0,.12) !important;
+}
+
+/* ── PAGINATION ──────────────────────────────────────────────────── */
+.pagination { gap: 3px; }
+.page-link {
+  background: var(--card) !important;
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+  font-family: var(--mono) !important;
+  font-size: .8rem !important;
+  border-radius: var(--r-sm) !important;
+  padding: 6px 13px !important;
+}
+.page-link:hover { background: var(--green-faint) !important; border-color: var(--green) !important; color: var(--green) !important; }
+.page-item.active .page-link {
+  background: var(--green-faint) !important;
+  border-color: var(--green) !important;
+  color: var(--green) !important;
+  box-shadow: var(--glow-green) !important;
+  font-weight: 700 !important;
+}
+.page-item.disabled .page-link { opacity: .35 !important; }
+
+/* ── FORM CONTROLS ───────────────────────────────────────────────── */
+.form-control, .form-select, input[type="text"], input[type="search"], input {
+  background: var(--bg2) !important;
+  border: 1.5px solid var(--border) !important;
+  color: var(--text-bright) !important;
+  border-radius: var(--r-sm) !important;
+  padding: 10px 16px !important;
+  font-family: var(--mono) !important;
+  font-size: .85rem !important;
+}
+.form-control:focus, .form-select:focus, input:focus {
+  background: var(--bg2) !important;
+  border-color: var(--green) !important;
+  box-shadow: 0 0 0 3px rgba(159,239,0,.12) !important;
+  outline: none !important;
+  color: #fff !important;
+}
+input::placeholder, .form-control::placeholder { color: var(--muted) !important; font-style: italic; }
+
+/* ── BADGES ──────────────────────────────────────────────────────── */
+.badge {
+  border-radius: 5px !important;
+  font-family: var(--mono) !important;
+  font-weight: 600 !important;
+  padding: 3px 9px !important;
+  font-size: .7rem !important;
+}
+
+/* ── FOOTER ──────────────────────────────────────────────────────── */
+footer, [class*="footer"] {
+  background: var(--bg2) !important;
+  border-top: 1px solid var(--border) !important;
+  color: var(--muted) !important;
+  padding: 36px 32px !important;
+}
+footer *, [class*="footer"] * { color: var(--muted) !important; }
+footer a, [class*="footer"] a { color: var(--green) !important; }
+
+/* ── CONTAINER ───────────────────────────────────────────────────── */
+.container { max-width: 1280px !important; padding: 0 24px !important; }
+
+/* ── CARD HEADINGS with terminal accent ─────────────────────────── */
+.ca-card-heading {
+  border-left: 3px solid var(--green) !important;
+  padding-left: 12px !important;
+  color: var(--heading) !important;
+}
