@@ -12587,7 +12587,7 @@ textarea.form-control-lg {
         ['type','period','source'].forEach(function(k) {
           if (h[k]) suffix += '_' + k + '_' + String(h[k]).replace(/[^a-zA-Z0-9]/g,'_');
         });
-        return _fetch('/api-data/' + base + suffix + '.json', opts);
+        return _fetch('/crypto-abuse/api-data/' + base + suffix + '.json', opts);
       }
     } catch (e) {}
     return _fetch(url, opts);
