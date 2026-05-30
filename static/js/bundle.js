@@ -109,7 +109,6 @@ function App() {
         lineNumber: 26,
         columnNumber: 9
       }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxDEV)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.BrowserRouter, {
-        basename: "/crypto-abuse",
         children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxDEV)(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Routes, {
           children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxDEV)(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Route, {
             exact: true,
@@ -1417,7 +1416,7 @@ class TableAbuse extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
                 backgroundColor: "#e6e6e6"
               },
               children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxDEV)("a", {
-                href: `/stats?type=${this.state.type}&source=Total`,
+                href: `/crypto-abuse/stats?type=${this.state.type}&source=Total`,
                 children: (0,_utils_MoneyFormatter__WEBPACK_IMPORTED_MODULE_2__["default"])(data[i].num_of_addresses)
               }, void 0, false, {
                 fileName: _jsxFileName,
@@ -1505,7 +1504,7 @@ class TableAbuse extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
                 paddingLeft: "2%"
               },
               children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxDEV)("a", {
-                href: `/stats?type=${this.state.type}&source=${key}`,
+                href: `/crypto-abuse/stats?type=${this.state.type}&source=${key}`,
                 children: (0,_utils_MoneyFormatter__WEBPACK_IMPORTED_MODULE_2__["default"])(data[key].num_of_addresses)
               }, void 0, false, {
                 fileName: _jsxFileName,
@@ -1585,7 +1584,7 @@ class TableAbuse extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
                 paddingLeft: "2%"
               },
               children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxDEV)("a", {
-                href: `/stats?type=${this.state.type}&source=${key}`,
+                href: `/crypto-abuse/stats?type=${this.state.type}&source=${key}`,
                 children: (0,_utils_MoneyFormatter__WEBPACK_IMPORTED_MODULE_2__["default"])(data[key].num_of_addresses)
               }, void 0, false, {
                 fileName: _jsxFileName,
@@ -3402,7 +3401,7 @@ class Bar extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
         variant: "dark",
         children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"], {
           children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"].Brand, {
-            href: "/crypto-abuse/",
+            href: "/",
             children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__["default"], {
               style: {},
               children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["default"], {
@@ -3440,7 +3439,7 @@ class Bar extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
           }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["default"], {
             className: "me-auto",
             children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["default"].Link, {
-              href: "/crypto-abuse/sources",
+              href: "/sources",
               children: "Sources"
             }, void 0, false, {
               fileName: _jsxFileName,
@@ -3779,7 +3778,7 @@ class Menu extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
         lineNumber: 164,
         columnNumber: 9
       }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("a", {
-        href: `/statistics?type=All`,
+        href: `/crypto-abuse/statistics?type=All`,
         style: {
           textDecoration: 'none',
           color: type === "All" ? "black" : "gray",
@@ -3791,7 +3790,7 @@ class Menu extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
         lineNumber: 165,
         columnNumber: 9
       }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("a", {
-        href: `/statistics?type=Ransomware`,
+        href: `/crypto-abuse/statistics?type=Ransomware`,
         style: {
           textDecoration: 'none',
           color: type === "Ransomware" ? "black" : "gray",
@@ -3804,7 +3803,7 @@ class Menu extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
         lineNumber: 166,
         columnNumber: 9
       }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("a", {
-        href: `/statistics?type=BlackmailScam`,
+        href: `/crypto-abuse/statistics?type=BlackmailScam`,
         style: {
           textDecoration: 'none',
           color: type === "BlackmailScam" ? "black" : "gray",
@@ -3817,7 +3816,7 @@ class Menu extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
         lineNumber: 167,
         columnNumber: 9
       }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("a", {
-        href: `/statistics?type=BitcoinTumbler`,
+        href: `/crypto-abuse/statistics?type=BitcoinTumbler`,
         style: {
           textDecoration: 'none',
           color: type === "BitcoinTumbler" ? "black" : "gray",
@@ -3830,7 +3829,7 @@ class Menu extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
         lineNumber: 168,
         columnNumber: 9
       }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("a", {
-        href: `/statistics?type=DarknetMarket`,
+        href: `/crypto-abuse/statistics?type=DarknetMarket`,
         style: {
           textDecoration: 'none',
           color: type === "DarknetMarket" ? "black" : "gray",
@@ -3843,7 +3842,7 @@ class Menu extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
         lineNumber: 169,
         columnNumber: 9
       }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("a", {
-        href: `/statistics?type=Sanctions`,
+        href: `/crypto-abuse/statistics?type=Sanctions`,
         style: {
           textDecoration: 'none',
           color: type === "Sanctions" ? "black" : "gray",
@@ -3856,7 +3855,7 @@ class Menu extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
         lineNumber: 170,
         columnNumber: 9
       }, this), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxDEV)("a", {
-        href: `/statistics?type=Other`,
+        href: `/crypto-abuse/statistics?type=Other`,
         style: {
           textDecoration: 'none',
           color: type === "Other" ? "black" : "gray",
@@ -121386,7 +121385,7 @@ module.exports = JSON.parse('{"clientIP":"http://localhost","serverPort":"5000",
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	(() => {
-/******/ 		__webpack_require__.p = "/crypto-abuse/";
+/******/ 		__webpack_require__.p = "/";
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/react refresh */
