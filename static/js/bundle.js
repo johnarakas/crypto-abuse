@@ -1416,7 +1416,7 @@ class TableAbuse extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
                 backgroundColor: "#e6e6e6"
               },
               children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxDEV)("a", {
-                href: `/crypto-abuse/stats?type=${this.state.type}&source=Total`,
+                href: `/stats?type=${this.state.type}&source=Total`,
                 children: (0,_utils_MoneyFormatter__WEBPACK_IMPORTED_MODULE_2__["default"])(data[i].num_of_addresses)
               }, void 0, false, {
                 fileName: _jsxFileName,
@@ -1504,7 +1504,7 @@ class TableAbuse extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
                 paddingLeft: "2%"
               },
               children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxDEV)("a", {
-                href: `/crypto-abuse/stats?type=${this.state.type}&source=${key}`,
+                href: `/stats?type=${this.state.type}&source=${key}`,
                 children: (0,_utils_MoneyFormatter__WEBPACK_IMPORTED_MODULE_2__["default"])(data[key].num_of_addresses)
               }, void 0, false, {
                 fileName: _jsxFileName,
@@ -1584,7 +1584,7 @@ class TableAbuse extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
                 paddingLeft: "2%"
               },
               children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxDEV)("a", {
-                href: `/crypto-abuse/stats?type=${this.state.type}&source=${key}`,
+                href: `/stats?type=${this.state.type}&source=${key}`,
                 children: (0,_utils_MoneyFormatter__WEBPACK_IMPORTED_MODULE_2__["default"])(data[key].num_of_addresses)
               }, void 0, false, {
                 fileName: _jsxFileName,
